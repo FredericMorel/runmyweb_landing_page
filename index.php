@@ -11,5 +11,9 @@
     <h1>Bienvenue sur RunMyWEb ou nous vous proposons la création de votre site web</h1>
     <h2>test</h2>
     <p>ceci est un test</p>
+    <?php
+    require_once "/wamp64/www/portfolio-runmyweb/database/database.php"
+    
+    ?>
 </body>
 </html>
