@@ -13,18 +13,18 @@
     <p>Grace à votre site web</p>
 
     <?php
-    require_once ("database/Database.php");
+  
     require_once ("database/MyPDO.php");
     echo "<br><br>";
     $pdo = MyPDO::getPDO();
-    $statement = $pdo->prepare("SELECT lastname, firstname from users");
+    $statement = $pdo->prepare("SELECT * from users");
     $statement->execute();
     $users= $statement->fetchAll();
     echo '<br>';
-    print_r('ligne1');
-    print_r($users);
+
+   
     foreach ($users as $user) {
-        echo $user['companyname']."<br>";
+        echo "Entreprise :".$user['companyname']."<br>";
         echo $user['lastname']."<br/>";
         echo $user['firstname']."<br/>";
         
